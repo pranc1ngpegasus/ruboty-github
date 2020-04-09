@@ -1,7 +1,10 @@
 require "active_support/core_ext/string/strip"
 require "octokit"
+require 'json'
+require 'webrick'
 
 require "ruboty"
+require 'ruboty/adapters/github_webhook'
 require "ruboty/github/actions/base"
 require "ruboty/github/actions/close_issue"
 require "ruboty/github/actions/create_branch"
