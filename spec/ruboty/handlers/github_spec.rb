@@ -314,7 +314,7 @@ describe Ruboty::Handlers::Github do
           },
           body: [
             {
-              url: pr_url,
+              html_url: pr_url,
               title: pr_title,
             },
           ].to_json,

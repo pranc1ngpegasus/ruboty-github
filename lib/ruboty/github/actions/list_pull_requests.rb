@@ -32,7 +32,7 @@ module Ruboty
 
         def pull_request_links
           pull_requests.map do |pull_request|
-            "[#{pull_request.url}] #{pull_request.title}"
+            "[#{pull_request.html_url}] #{pull_request.title}"
           end
         end
 
