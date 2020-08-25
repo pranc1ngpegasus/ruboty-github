@@ -73,6 +73,12 @@ module Ruboty
       )
 
       on(
+        /get pull request diff (?<repo>.+) (?<base>.+)\.\.(?<head>.+)/,
+        name: "get_pr_diff",
+        description: "Get Pull Request diff",
+      )
+
+      on(
         /get changelog (?<repo>.+)/,
         name: "get_changelog",
         description: "Get changelog"
@@ -126,6 +132,10 @@ module Ruboty
 
       def get_commit_diff(message)
         Ruboty::Github::Actions::GetCommitDiff.new(message).call
+      end
+
+      def get_pr_diff(message)
+        Ruboty::Github::Actions::GetPRDiff.new(message).call
       end
 
       def get_changelog(message)
